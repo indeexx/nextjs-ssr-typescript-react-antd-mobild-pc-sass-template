@@ -459,6 +459,28 @@ export async function getStaticProps() {
 **getServerSideProps**是ssr，每次请求都会重新生成新的静态页面
 
 
+## Mongodb
+
+安装mongodb库：
+
+```bash
+npm i -S mongoose
+```
+
+
+服务器或本机安装*Mongodb*，然后在根目录创建*.env.local*：
+
+```bash
+DATABASE_URL=mongodb://localhost:27017/next_todo_list
+API_URL=http://localhost:3000/api/todos
+```
+
+
+## 案例
+
+
+见源码
+
 ## 发布
 
 修改*package.json*：
@@ -470,6 +492,11 @@ export async function getStaticProps() {
 ```
 
 每次运行时，自动build一次
+
+
+> 如果启动后页面出现
+> "500 - Internal Server Error." name: "Internal Server Error." statusCode: 500
+> 切换node版本，如：v14.19.3
 
 
 ## 部署
@@ -498,7 +525,7 @@ pm2 start npm --name 'indeex-demo' -- run build
 然后是根据端口，配置nginx即可，端口可根据需求修改，也可以运行时指定：
 
 ```bash
-"start": "next build && next start -p 8080",
+"start": "next build && next start -p 3000",
 ```
 
 ## 导出页面

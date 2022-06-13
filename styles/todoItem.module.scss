@@ -1,0 +1,27 @@
+.todoItem {
+    .headerBar {
+        width: 100%;
+
+        .back {}
+    }
+
+    .card {
+        margin-top: 30px;
+        :global(.adm-card-header-title){
+            font-size: 28px;
+        }
+        .customBody {
+            // color: #00b578;
+            font-size: 24px;
+        }
+    }
+
+    .btns{
+        margin-top: 50px;
+        text-align: right;
+        button{
+            margin: 0 5px;
+        }
+    }
+
+}

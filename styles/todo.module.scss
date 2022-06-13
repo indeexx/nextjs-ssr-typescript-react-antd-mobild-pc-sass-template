@@ -1,0 +1,34 @@
+.todo {
+    padding-bottom: 80px;
+
+    .add {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        width: 80%;
+    }
+
+    .item {
+        .completed {
+            color: gray;
+        }
+
+        .incomplete {
+            color: green;
+        }
+    }
+
+    .complete {
+        :global(.adm-list-item-content-main) {
+            text-decoration: line-through;
+            color: gray;
+        }
+    }
+
+    .incomp {
+        :global(.adm-list-item-content-main) {
+            // color: green;
+        }
+    }
+}
